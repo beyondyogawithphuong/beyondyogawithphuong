@@ -20,7 +20,7 @@ export default function Home() {
       <OngoingPractices />
       <About />
       <ContactInfo />
-      <Newsletter />
+      {/* <Newsletter /> */}
       <Footer />
     </main>
   )
