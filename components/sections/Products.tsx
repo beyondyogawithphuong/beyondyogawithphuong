@@ -27,7 +27,7 @@ export default function Products() {
     <section className="py-20 md:py-32 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-serif text-brand-dark mb-4 text-center">
-          Audio Products
+          Sản Phẩm Audio
         </h2>
         <p className="text-center text-gray-600 mb-12">
           Các công cụ âm thanh để hỗ trợ hành trình phục hồi của bạn

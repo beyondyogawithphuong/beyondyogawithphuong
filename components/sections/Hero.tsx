@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="overlay-section section-padding">
+    <section className="overlay-section py-20 md:py-24 px-4">
       <div className="container-tight mx-auto">
         {/* Logo */}
         <div className="mb-16 flex justify-center">

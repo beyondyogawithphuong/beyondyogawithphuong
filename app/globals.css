@@ -41,7 +41,7 @@ h4 { font-size: 1.5rem; }
 }
 
 .btn-highlight {
-  @apply inline-block px-8 py-4 bg-brand-highlight text-brand-dark font-semibold transition-all hover:bg-opacity-90;
+  @apply inline-block px-8 py-4 bg-brand-overlay text-brand-text font-semibold transition-all hover:opacity-90;
 }
 
 .btn-warning {

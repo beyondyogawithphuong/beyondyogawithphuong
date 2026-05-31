@@ -1,7 +1,7 @@
 import { Lora, Montserrat } from 'next/font/google'
 
 export const lora = Lora({
-  subsets: ['latin', 'latin-ext'],
+  subsets: ['latin', 'latin-ext', 'vietnamese'],
   weight: ['400', '600', '700'],
   variable: '--font-lora',
   display: 'swap',
