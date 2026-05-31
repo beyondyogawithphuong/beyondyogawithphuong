@@ -1,13 +1,6 @@
 {
-  "name": "beyond-yoga-hub",
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": "nextjs",
-  "env": {
-    "DISCORD_WEBHOOK_URL": {
-      "description": "Discord webhook URL for notifications",
-      "required": false
-    }
-  }
+  "framework": "nextjs"
 }
