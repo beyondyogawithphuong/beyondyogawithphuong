@@ -67,10 +67,10 @@ export default function Footer() {
               © {currentYear} Beyond Yoga with Phương. Tất cả các quyền được bảo lưu.
             </p>
             <div className="flex gap-6 text-white/60 text-sm">
-              <a href="#" className="hover:text-white transition">
+              <a href="/chinh-sach-bao-mat" className="hover:text-white transition">
                 Chính sách bảo mật
               </a>
-              <a href="#" className="hover:text-white transition">
+              <a href="/dieu-khoan-dich-vu" className="hover:text-white transition">
                 Điều khoản dịch vụ
               </a>
             </div>
