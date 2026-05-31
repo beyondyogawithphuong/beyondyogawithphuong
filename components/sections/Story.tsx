@@ -8,7 +8,7 @@ export default function Story() {
         </h2>
 
         {/* Body Section 1 */}
-        <div className="space-y-6 mb-12 text-lg leading-relaxed text-gray-700">
+        <div className="space-y-6 mb-12 text-lg leading-relaxed text-brand-dark opacity-80">
           <p>
             Sáng mở mắt ra, thứ đầu tiên bạn cảm nhận không phải là sự tỉnh táo. Là cái cổ cứng đờ. Là hai vai nặng trĩu như đang gánh đá. Hàm siết chặt từ lúc nào không biết.
           </p>
@@ -19,7 +19,7 @@ export default function Story() {
         </div>
 
         {/* Body Section 2 */}
-        <div className="space-y-6 mb-12 text-lg leading-relaxed text-gray-700">
+        <div className="space-y-6 mb-12 text-lg leading-relaxed text-brand-dark opacity-80">
           <p>
             Đau đầu thì uống viên Panadol rồi vào họp tiếp. Vai gáy căng mỏi thì bóp vài cái rồi lại dán mắt vào màn hình. Cơ thể lên tiếng hoài, bạn nghe thấy hoài, nhưng lúc nào cũng có một việc khác quan trọng hơn được ưu tiên.
           </p>
@@ -35,13 +35,13 @@ export default function Story() {
 
         {/* Key Insight - Highlighted */}
         <div className="bg-brand-overlay bg-opacity-10 border-l-4 border-brand-highlight p-8 mb-12 rounded">
-          <p className="text-lg leading-relaxed text-gray-800">
+          <p className="text-lg leading-relaxed text-brand-dark">
             Cơ thể không hồi phục chỉ vì bạn đã ngừng làm việc. Nó chỉ thực sự hồi phục khi nó cảm nhận được hai chữ: <span className="font-bold text-brand-dark">"An toàn"</span>.
           </p>
         </div>
 
         {/* Scientific Explanation */}
-        <div className="space-y-6 mb-12 text-lg leading-relaxed text-gray-700">
+        <div className="space-y-6 mb-12 text-lg leading-relaxed text-brand-dark opacity-80">
           <p>
             Khi hệ thần kinh của bạn vẫn bật chế độ cảnh giác, cơ thể sẽ tiếp tục canh chừng, tiếp tục gồng lên để phòng thủ và tiêu hao năng lượng. Đó là lý do vì sao bạn nằm im nhưng các bó cơ ở cổ, vai, hàm hay bụng vẫn cứ thắt chặt lại. Nó đang chờ xem có nguy hiểm gì sắp tới không. Và chừng nào nó chưa nhận được tín hiệu "an toàn rồi", nó sẽ không cho bạn nghỉ thật.
           </p>
@@ -56,7 +56,7 @@ export default function Story() {
           Tại sao việc điều hòa hệ thần kinh lại quan trọng đến vậy?
         </h3>
 
-        <div className="space-y-6 mb-12 text-lg leading-relaxed text-gray-700">
+        <div className="space-y-6 mb-12 text-lg leading-relaxed text-brand-dark opacity-80">
           <p>
             Khi hệ thần kinh ổn định, áp lực cuộc sống vẫn ở đó, những ngày khó khăn vẫn tới, nhưng bạn không bị nó cuốn phăng đi. Bạn xử lý được việc mà không cần liên tục gồng mình. Bạn có thêm một khoảng trống nhỏ giữa những gì đang xảy ra và cách mình phản ứng lại. Chính khoảng trống đó cứu rỗi cảm xúc của bạn.
           </p>
@@ -83,14 +83,14 @@ export default function Story() {
               </div>
               <div>
                 <p className="font-semibold text-brand-dark">{item.title}</p>
-                <p className="text-gray-700">{item.desc}</p>
+                <p className="text-brand-dark opacity-80">{item.desc}</p>
               </div>
             </li>
           ))}
         </ul>
 
         {/* Conclusion */}
-        <div className="space-y-6 mb-12 text-lg leading-relaxed text-gray-700">
+        <div className="space-y-6 mb-12 text-lg leading-relaxed text-brand-dark opacity-80">
           <p>
             Điều hòa hệ thần kinh không phải là một xu hướng wellness thời thượng, cũng không phải là việc bạn phải nhét thêm một gạch đầu dòng nữa vào danh sách việc cần làm vốn đã quá dài. Nó không bắt bạn làm thêm. Nó bảo bạn <span className="font-semibold text-brand-dark">làm ít lại</span>.
           </p>
@@ -101,7 +101,7 @@ export default function Story() {
         </div>
 
         {/* Signature */}
-        <div className="pt-8 border-t border-gray-200">
+        <div className="pt-8 border-t border-brand-dark border-opacity-10">
           <p className="text-center text-lg text-brand-dark font-semibold">
             Phương - Đồng hành cùng bạn tái tạo năng lượng và tìm lại giấc ngủ ngon từ gốc.
           </p>
