@@ -1,15 +1,9 @@
 export default function HeroNew() {
   return (
-    <section className="bg-white py-24 md:py-32 px-4 relative">
-      {/* Decorative background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-overlay opacity-5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-highlight opacity-5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="relative max-w-4xl mx-auto text-center">
-        {/* CTA Button Top Right */}
-        <div className="absolute -top-12 right-4 md:right-0">
+    <section className="bg-white py-24 md:py-32 px-4">
+      <div className="max-w-4xl mx-auto text-center">
+        {/* CTA Button Top */}
+        <div className="mb-8">
           <a href="#entry-points" className="inline-block px-6 py-2 bg-brand-overlay text-brand-text font-semibold rounded-full text-sm hover:shadow-lg transition-all duration-300">
             Bắt đầu từ đâu?
           </a>
