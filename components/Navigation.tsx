@@ -15,8 +15,8 @@ export default function Navigation() {
   }, [])
 
   const navItems = [
-    { label: 'MAIN PAGE', href: '#' },
-    { label: 'BẢN TIN', href: '#newsletter' },
+    { label: 'MAIN PAGE', href: '/' },
+    { label: 'BẢN TIN', href: 'https://beyondyogawithphuong.substack.com/', external: true },
     { label: 'DỊCH VỤ', href: '#services' },
     { label: 'CONTACT INFO', href: '#contact' },
     { label: 'VỀ PHƯƠNG', href: '#about' },
@@ -30,10 +30,12 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           {/* Left Nav Items */}
           <div className="flex items-center gap-8">
-            {navItems.slice(0, 2).map((item) => (
+            {navItems.slice(0, 2).map((item: any) => (
               <a
                 key={item.label}
                 href={item.href}
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noopener noreferrer' : undefined}
                 className="text-sm font-body font-semibold text-brand-text hover:text-brand-primary transition-colors"
               >
                 {item.label}
