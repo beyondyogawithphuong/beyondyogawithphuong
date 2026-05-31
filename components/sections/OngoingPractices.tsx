@@ -29,7 +29,7 @@ export default function OngoingPractices() {
   ]
 
   return (
-    <section className="py-20 md:py-32 px-4 bg-brand-light">
+    <section className="py-20 md:py-32 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-serif text-brand-text mb-4 text-center">
           Hỗ Trợ Liên Tục
@@ -41,16 +41,16 @@ export default function OngoingPractices() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {practices.map((practice, idx) => (
             <div key={idx} className="bg-white rounded-lg p-10 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-5xl font-serif font-bold text-brand-primary/20 mb-4">{practice.number}</div>
+              <div className="text-5xl font-serif font-bold text-brand-highlight/20 mb-4">{practice.number}</div>
               <h3 className="text-2xl font-serif text-brand-text mb-2">
                 {practice.title}
               </h3>
-              <p className="text-brand-primary font-semibold mb-6">{practice.description}</p>
+              <p className="text-brand-highlight font-semibold mb-6">{practice.description}</p>
 
               <ul className="space-y-3 mb-8">
                 {practice.features.map((feature, fidx) => (
                   <li key={fidx} className="flex gap-3 text-brand-text/70">
-                    <span className="text-brand-primary flex-shrink-0">✓</span>
+                    <span className="text-brand-highlight flex-shrink-0">✓</span>
                     <span>{feature}</span>
                   </li>
                 ))}

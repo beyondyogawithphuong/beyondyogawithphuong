@@ -39,7 +39,7 @@ export default async function CheckoutPage({
           <h1 className="text-3xl font-bold text-brand-text mb-4">
             Sản phẩm không tìm thấy
           </h1>
-          <a href="/" className="text-brand-primary hover:underline">
+          <a href="/" className="text-brand-highlight hover:underline">
             Quay lại trang chủ
           </a>
         </div>
@@ -48,11 +48,11 @@ export default async function CheckoutPage({
   }
 
   return (
-    <div className="min-h-screen bg-brand-light py-12 px-4">
+    <div className="min-h-screen bg-white py-12 px-4">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <a href="/" className="text-brand-primary hover:underline mb-8 inline-block">
+          <a href="/" className="text-brand-highlight hover:underline mb-8 inline-block">
             ← Quay lại
           </a>
           <h1 className="text-4xl font-serif text-brand-text mb-2">
@@ -62,7 +62,7 @@ export default async function CheckoutPage({
         </div>
 
         {/* Product Info */}
-        <div className="bg-white rounded-lg p-6 mb-8 border-l-4 border-brand-primary">
+        <div className="bg-white rounded-lg p-6 mb-8 border-l-4 border-brand-overlay">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
               <span className="text-3xl">🕐</span>
@@ -74,7 +74,7 @@ export default async function CheckoutPage({
               </div>
             </div>
             <div className="text-right">
-              <div className="text-3xl font-bold text-brand-primary">
+              <div className="text-3xl font-bold text-brand-highlight">
                 {product.price.toLocaleString('vi-VN')}đ
               </div>
             </div>

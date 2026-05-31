@@ -1,10 +1,10 @@
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-brand-light py-16 px-4">
+    <div className="min-h-screen bg-white py-16 px-4">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <a href="/" className="text-brand-primary hover:underline mb-8 inline-block">
+          <a href="/" className="text-brand-highlight hover:underline mb-8 inline-block">
             ← Quay lại trang chủ
           </a>
           <h1 className="text-4xl md:text-5xl font-serif text-brand-text mb-4">

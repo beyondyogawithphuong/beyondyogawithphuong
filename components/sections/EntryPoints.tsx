@@ -31,7 +31,7 @@ export default function EntryPoints() {
   ]
 
   return (
-    <section id="entry-points" className="py-20 md:py-32 px-4 bg-brand-light">
+    <section id="entry-points" className="py-20 md:py-32 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-serif text-brand-text mb-6 text-center">
           Bắt đầu từ đâu?
@@ -42,8 +42,8 @@ export default function EntryPoints() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {entryPoints.map((point, idx) => (
-            <div key={idx} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-8 border-l-4 border-brand-primary">
-              <div className="text-5xl font-serif font-bold text-brand-primary/30 mb-4">{point.number}</div>
+            <div key={idx} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-8 border-l-4 border-brand-overlay">
+              <div className="text-5xl font-serif font-bold text-brand-highlight/30 mb-4">{point.number}</div>
               <h3 className="text-lg font-semibold text-brand-text/70 mb-2">{point.title}</h3>
               <h4 className="text-2xl font-serif text-brand-text mb-4">{point.product}</h4>
               <p className="text-brand-text/60 mb-6">{point.description}</p>

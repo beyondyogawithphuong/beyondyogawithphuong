@@ -30,7 +30,7 @@ export default function Newsletter() {
   }
 
   return (
-    <section id="newsletter" className="py-20 md:py-32 px-4 bg-brand-primary text-white">
+    <section id="newsletter" className="py-20 md:py-32 px-4 bg-brand-overlay text-white">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-serif mb-4">
           Theo dõi Phương
@@ -53,7 +53,7 @@ export default function Newsletter() {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="px-8 py-4 bg-white text-brand-primary font-semibold rounded-sm hover:opacity-90 transition-opacity"
+              className="px-8 py-4 bg-brand-highlight text-brand-overlay font-semibold rounded-lg hover:opacity-90 transition-opacity"
             >
               {status === 'loading' ? 'Đang gửi...' : 'Đăng ký'}
             </button>
@@ -74,7 +74,7 @@ export default function Newsletter() {
               href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 border-2 border-white rounded-sm hover:bg-white hover:text-brand-primary transition-colors"
+              className="inline-block px-6 py-3 border-2 border-brand-text rounded-full hover:bg-brand-text hover:text-brand-overlay transition-colors"
             >
               ▶ YouTube
             </a>
@@ -82,7 +82,7 @@ export default function Newsletter() {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 border-2 border-white rounded-sm hover:bg-white hover:text-brand-primary transition-colors"
+              className="inline-block px-6 py-3 border-2 border-brand-text rounded-full hover:bg-brand-text hover:text-brand-overlay transition-colors"
             >
               f Facebook
             </a>
@@ -90,7 +90,7 @@ export default function Newsletter() {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 border-2 border-white rounded-sm hover:bg-white hover:text-brand-primary transition-colors"
+              className="inline-block px-6 py-3 border-2 border-brand-text rounded-full hover:bg-brand-text hover:text-brand-overlay transition-colors"
             >
               @ Instagram
             </a>

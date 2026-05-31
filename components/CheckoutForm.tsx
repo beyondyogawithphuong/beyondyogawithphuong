@@ -69,7 +69,7 @@ export default function CheckoutForm({ product, productId }: CheckoutFormProps) 
           onChange={handleChange}
           placeholder="Nguyễn Thị Mai"
           required
-          className="w-full px-4 py-3 border border-brand-primary/20 rounded-sm focus:outline-none focus:ring-2 focus:ring-brand-primary"
+          className="w-full px-4 py-3 border border-brand-overlay/20 rounded-sm focus:outline-none focus:ring-2 focus:ring-brand-primary"
         />
       </div>
 
@@ -87,9 +87,9 @@ export default function CheckoutForm({ product, productId }: CheckoutFormProps) 
             onChange={handleChange}
             placeholder="tên.của.bạn"
             required
-            className="flex-1 px-4 py-3 border border-brand-primary/20 rounded-sm focus:outline-none focus:ring-2 focus:ring-brand-primary"
+            className="flex-1 px-4 py-3 border border-brand-overlay/20 rounded-sm focus:outline-none focus:ring-2 focus:ring-brand-primary"
           />
-          <span className="px-3 py-3 bg-brand-primary text-white rounded-sm font-semibold">
+          <span className="px-3 py-3 bg-brand-overlay text-white rounded-sm font-semibold">
             @gmail.com
           </span>
         </div>
@@ -125,12 +125,12 @@ export default function CheckoutForm({ product, productId }: CheckoutFormProps) 
       )}
 
       {/* Footer Info */}
-      <div className="mt-12 pt-8 border-t border-brand-primary/10 text-center text-sm text-brand-text/60">
+      <div className="mt-12 pt-8 border-t border-brand-overlay/10 text-center text-sm text-brand-text/60">
         <p className="mb-2">
           Bạn sẽ nhận tài liệu qua email trong vòng 24 giờ
         </p>
         <p>
-          Nếu có vấn đề gì, <a href="/" className="text-brand-primary hover:underline">liên hệ với chúng tôi</a>
+          Nếu có vấn đề gì, <a href="/" className="text-brand-highlight hover:underline">liên hệ với chúng tôi</a>
         </p>
       </div>
     </form>

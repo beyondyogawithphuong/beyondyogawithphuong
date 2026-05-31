@@ -24,7 +24,7 @@ export default function Products() {
   ]
 
   return (
-    <section className="py-20 md:py-32 px-4 bg-brand-light">
+    <section className="py-20 md:py-32 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-serif text-brand-text mb-4 text-center">
           Sản Phẩm Audio
@@ -38,15 +38,15 @@ export default function Products() {
           {audioProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-white rounded-lg p-8 hover:shadow-lg transition-shadow border border-brand-primary/10"
+              className="bg-white rounded-lg p-8 hover:shadow-lg transition-shadow border border-brand-overlay/10"
             >
-              <div className="text-5xl font-serif font-bold text-brand-primary/20 mb-4">{product.number}</div>
+              <div className="text-5xl font-serif font-bold text-brand-highlight/20 mb-4">{product.number}</div>
               <h3 className="text-xl font-bold text-brand-text mb-2">
                 {product.title}
               </h3>
               <p className="text-brand-text/60 mb-4 text-sm">{product.description}</p>
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-bold text-brand-primary">
+                <span className="text-2xl font-bold text-brand-highlight">
                   {product.price.toLocaleString('vi-VN')}đ
                 </span>
                 <a href={`/checkout/${product.id}`} className="btn-gold text-sm">

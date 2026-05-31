@@ -18,7 +18,7 @@ export default function Hero() {
         </h1>
 
         {/* Divider */}
-        <div className="w-16 h-1 bg-brand-primary mb-12"></div>
+        <div className="w-16 h-1 bg-brand-overlay mb-12"></div>
 
         {/* Description - Left Aligned */}
         <div className="space-y-6 mb-12 max-w-2xl">

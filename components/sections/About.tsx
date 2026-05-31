@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="py-20 md:py-32 px-4 bg-brand-light">
+    <section id="about" className="py-20 md:py-32 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-serif text-brand-text mb-16 text-center">
           Về Phương
@@ -9,7 +9,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Image Left */}
           <div className="order-2 md:order-1">
-            <div className="bg-brand-primary/5 rounded-sm aspect-square flex items-center justify-center overflow-hidden border border-brand-primary/20">
+            <div className="bg-brand-overlay/5 rounded-sm aspect-square flex items-center justify-center overflow-hidden border border-brand-overlay/20">
               <img src="/phuong.png" alt="Phương" className="w-full h-full object-cover" />
             </div>
           </div>
@@ -32,7 +32,7 @@ export default function About() {
               <strong>Beyond Yoga with Phương</strong> là nơi mình đồng hành cùng bạn để cơ thể học lại cách phục hồi. Không phải bằng cách ép mình phải thư giãn, mà bằng cách thay đổi quy luật vận hành của hệ thần kinh.
             </p>
 
-            <div className="bg-brand-primary/5 p-6 rounded-sm border-l-4 border-brand-primary">
+            <div className="bg-brand-overlay/5 p-6 rounded-sm border-l-4 border-brand-overlay">
               <p className="text-brand-text font-semibold">
                 "Mình hiểu vì mình đã trải qua. Mình là chứng nhân của cách hệ thần kinh có thể thay đổi khi được đối xử đúng cách."
               </p>

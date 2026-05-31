@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { lora, inter } from './fonts'
+import { lora, montserrat } from './fonts'
 import Navigation from '@/components/Navigation'
 import './globals.css'
 
@@ -15,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="vi" className={`${lora.variable} ${inter.variable}`}>
-      <body className="bg-brand-light font-body">
+    <html lang="vi" className={`${lora.variable} ${montserrat.variable}`}>
+      <body className="bg-white font-body">
         <Navigation />
         <div className="pt-24">
           {children}

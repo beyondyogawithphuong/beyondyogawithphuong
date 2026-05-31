@@ -1,4 +1,4 @@
-import { Lora, Inter } from 'next/font/google'
+import { Lora, Montserrat } from 'next/font/google'
 
 export const lora = Lora({
   subsets: ['latin', 'latin-ext', 'vietnamese'],
@@ -7,9 +7,9 @@ export const lora = Lora({
   display: 'swap',
 })
 
-export const inter = Inter({
+export const montserrat = Montserrat({
   subsets: ['latin', 'latin-ext'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-inter',
+  variable: '--font-montserrat',
   display: 'swap',
 })
