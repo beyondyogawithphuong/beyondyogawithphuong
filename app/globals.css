@@ -35,19 +35,19 @@ h4 { font-size: 1.5rem; }
 
 /* Buttons */
 .btn-primary {
-  @apply inline-block px-8 py-4 bg-brand-overlay text-brand-text font-semibold transition-all hover:bg-opacity-90 active:scale-95;
+  @apply inline-block px-8 py-3 bg-brand-overlay text-brand-text font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] active:translate-y-0;
 }
 
 .btn-highlight {
-  @apply inline-block px-8 py-4 bg-brand-overlay text-brand-text font-semibold transition-all hover:opacity-90;
+  @apply inline-block px-8 py-3 bg-brand-overlay text-brand-text font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] active:translate-y-0;
 }
 
 .btn-warning {
-  @apply inline-block px-8 py-4 bg-brand-warning text-brand-text font-semibold transition-all hover:bg-opacity-90;
+  @apply inline-block px-8 py-3 bg-brand-warning text-brand-text font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] active:translate-y-0;
 }
 
 .btn-gold {
-  @apply inline-block px-6 py-3 bg-brand-overlay text-brand-text font-semibold transition-all hover:opacity-90;
+  @apply inline-block px-6 py-3 bg-brand-overlay text-brand-text font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] active:translate-y-0;
 }
 
 /* Overlay sections */
