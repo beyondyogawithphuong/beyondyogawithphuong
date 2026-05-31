@@ -7,11 +7,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-dark': '#1a4d40',
-        'brand-gold': '#D4A574',
-        'brand-sage': '#2a7a6f',
-        'brand-coral': '#D85D4F',
-        'brand-cream': '#F5F1ED',
+        'brand-overlay': '#22654a',
+        'brand-text': '#FFFFFF',
+        'brand-highlight': '#00E5FF',
+        'brand-warning': '#FF3D00',
+        'brand-dark': '#1a1a1a',
+        'brand-light': '#f8f8f8',
+      },
+      fontFamily: {
+        'title': ['Lora', 'serif'],
+        'body': ['Montserrat', 'sans-serif'],
       },
     },
   },

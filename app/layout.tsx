@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { lora, montserrat } from './fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -13,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="vi">
-      <body className="bg-white">
+    <html lang="vi" className={`${lora.variable} ${montserrat.variable}`}>
+      <body className="bg-white font-body">
         {children}
       </body>
     </html>
