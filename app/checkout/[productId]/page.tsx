@@ -24,12 +24,13 @@ const products: Record<string, any> = {
   },
 }
 
-export default function CheckoutPage({
+export default async function CheckoutPage({
   params,
 }: {
-  params: { productId: string }
+  params: Promise<{ productId: string }>
 }) {
-  const product = products[params.productId]
+  const { productId } = await params
+  const product = products[productId]
 
   if (!product) {
     return (
@@ -81,7 +82,7 @@ export default function CheckoutPage({
         </div>
 
         {/* Checkout Form */}
-        <CheckoutForm product={product} productId={params.productId} />
+        <CheckoutForm product={product} productId={productId} />
       </div>
     </div>
   )
