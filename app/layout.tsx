@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { lora, montserrat } from './fonts'
+import Navigation from '@/components/Navigation'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -16,7 +17,10 @@ export default function RootLayout({
   return (
     <html lang="vi" className={`${lora.variable} ${montserrat.variable}`}>
       <body className="bg-white font-body">
-        {children}
+        <Navigation />
+        <div className="pt-24">
+          {children}
+        </div>
       </body>
     </html>
   )
