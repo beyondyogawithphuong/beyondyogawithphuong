@@ -1,6 +1,6 @@
 export default function Story() {
   return (
-    <section className="py-20 md:py-32 px-4 bg-white">
+    <section id="story" className="py-20 md:py-32 px-4 bg-white">
       <div className="max-w-3xl mx-auto">
         {/* Opening Statement */}
         <h2 className="text-4xl md:text-5xl font-serif text-brand-dark mb-12 leading-relaxed">
