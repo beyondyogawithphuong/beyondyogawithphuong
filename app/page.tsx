@@ -1,4 +1,5 @@
 import Hero from '@/components/sections/Hero'
+import Story from '@/components/sections/Story'
 import Relatability from '@/components/sections/Relatability'
 import EntryPoints from '@/components/sections/EntryPoints'
 import Products from '@/components/sections/Products'
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
+      <Story />
       <Relatability />
       <EntryPoints />
       <Products />
