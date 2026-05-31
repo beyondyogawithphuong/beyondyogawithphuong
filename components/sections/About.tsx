@@ -10,8 +10,8 @@ export default function About() {
           {/* Avatar Frame - Replace with Phương's photo */}
           <div className="md:col-span-1">
             <div className="bg-gray-200 rounded-lg aspect-square flex items-center justify-center overflow-hidden border-4 border-brand-gold">
-              {/* PHOTO PLACEHOLDER - Square 400x400px */}
-              <img src="/phuong.jpg" alt="Phương" className="w-full h-full object-cover" />
+              {/* Your photo */}
+              <img src="/phuong.png" alt="Phương" className="w-full h-full object-cover" />
             </div>
           </div>
 
