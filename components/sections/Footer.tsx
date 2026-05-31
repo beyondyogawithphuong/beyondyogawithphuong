@@ -4,9 +4,16 @@ export default function Footer() {
   return (
     <footer className="bg-brand-text text-white py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-          {/* Contact Info */}
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12 items-start">
+          {/* Logo */}
+          <div className="flex justify-center md:justify-start">
+            <div className="h-24 w-24 rounded-lg overflow-hidden flex items-center justify-center bg-white/10">
+              <img src="/logo.png" alt="Beyond Yoga" className="h-full w-full object-cover" />
+            </div>
+          </div>
+
+          {/* Contact Info - Takes up remaining space */}
+          <div className="md:col-span-4">
             <h4 className="font-semibold mb-4">Thông Tin Liên Hệ</h4>
             <ul className="space-y-3 text-white/70 text-sm">
               <li>
@@ -28,33 +35,6 @@ export default function Footer() {
                 </a>
                 <a href="https://www.youtube.com/@phuong.wellbeingstrategist/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition block">
                   ▶ YouTube
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold mb-4">Các Chương Trình</h4>
-            <ul className="space-y-2 text-white/70">
-              <li>
-                <a href="https://sos-sleep-kit.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
-                  SOS Sleep Kit
-                </a>
-              </li>
-              <li>
-                <a href="https://workshop-nervous-system-reset.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
-                  Workshop
-                </a>
-              </li>
-              <li>
-                <a href="https://the-reclaim-program.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
-                  The Reclaim Protocol
-                </a>
-              </li>
-              <li>
-                <a href="https://lop-group.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
-                  Yoga Classes
                 </a>
               </li>
             </ul>
