@@ -30,7 +30,7 @@ export default function Newsletter() {
   }
 
   return (
-    <section className="py-20 md:py-32 px-4 bg-brand-dark text-white">
+    <section id="newsletter" className="py-20 md:py-32 px-4 bg-brand-primary text-white">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-serif mb-4">
           Theo dõi Phương
@@ -48,21 +48,21 @@ export default function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 px-6 py-4 rounded-full text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-gold"
+              className="flex-1 px-6 py-4 rounded-sm text-brand-dark focus:outline-none focus:ring-2 focus:ring-white"
             />
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="btn-gold px-8"
+              className="px-8 py-4 bg-white text-brand-primary font-semibold rounded-sm hover:opacity-90 transition-opacity"
             >
               {status === 'loading' ? 'Đang gửi...' : 'Đăng ký'}
             </button>
           </div>
           {status === 'success' && (
-            <p className="text-brand-gold mt-4">✓ Cảm ơn! Kiểm tra email của bạn.</p>
+            <p className="text-white/90 mt-4">✓ Cảm ơn! Kiểm tra email của bạn.</p>
           )}
           {status === 'error' && (
-            <p className="text-red-300 mt-4">Có lỗi xảy ra. Vui lòng thử lại.</p>
+            <p className="text-white/70 mt-4">Có lỗi xảy ra. Vui lòng thử lại.</p>
           )}
         </form>
 
@@ -74,7 +74,7 @@ export default function Newsletter() {
               href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 border-2 border-brand-gold rounded-full hover:bg-brand-gold hover:text-brand-dark transition-colors"
+              className="inline-block px-6 py-3 border-2 border-white rounded-sm hover:bg-white hover:text-brand-primary transition-colors"
             >
               ▶ YouTube
             </a>
@@ -82,7 +82,7 @@ export default function Newsletter() {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 border-2 border-brand-gold rounded-full hover:bg-brand-gold hover:text-brand-dark transition-colors"
+              className="inline-block px-6 py-3 border-2 border-white rounded-sm hover:bg-white hover:text-brand-primary transition-colors"
             >
               f Facebook
             </a>
@@ -90,7 +90,7 @@ export default function Newsletter() {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 border-2 border-brand-gold rounded-full hover:bg-brand-gold hover:text-brand-dark transition-colors"
+              className="inline-block px-6 py-3 border-2 border-white rounded-sm hover:bg-white hover:text-brand-primary transition-colors"
             >
               @ Instagram
             </a>

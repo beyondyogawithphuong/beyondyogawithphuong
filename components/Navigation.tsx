@@ -24,7 +24,7 @@ export default function Navigation() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-sm' : 'bg-white'
+      isScrolled ? 'bg-brand-light shadow-lg' : 'bg-brand-light'
     }`}>
       <div className="container-wide mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
@@ -34,7 +34,7 @@ export default function Navigation() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-body font-semibold text-neutral-900 hover:text-brand-overlay transition-colors"
+                className="text-sm font-body font-semibold text-brand-text hover:text-brand-primary transition-colors"
               >
                 {item.label}
               </a>
@@ -43,7 +43,7 @@ export default function Navigation() {
 
           {/* Logo Center */}
           <div className="flex-1 flex justify-center">
-            <div className="h-12 w-12 rounded-full overflow-hidden flex items-center justify-center bg-neutral-100">
+            <div className="h-12 w-12 rounded-full overflow-hidden flex items-center justify-center bg-brand-primary/10">
               <img src="/logo.png" alt="Beyond Yoga" className="h-full w-full object-cover" />
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function Navigation() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-body font-semibold text-neutral-900 hover:text-brand-overlay transition-colors"
+                className="text-sm font-body font-semibold text-brand-text hover:text-brand-primary transition-colors"
               >
                 {item.label}
               </a>
@@ -64,7 +64,7 @@ export default function Navigation() {
       </div>
 
       {/* Divider */}
-      <div className="h-px bg-neutral-200"></div>
+      <div className="h-px bg-brand-primary/20"></div>
     </nav>
   )
 }

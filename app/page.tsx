@@ -3,7 +3,7 @@ import Relatability from '@/components/sections/Relatability'
 import EntryPoints from '@/components/sections/EntryPoints'
 import Products from '@/components/sections/Products'
 import OngoingPractices from '@/components/sections/OngoingPractices'
-import Services from '@/components/sections/Services'
+// import Services from '@/components/sections/Services'
 import About from '@/components/sections/About'
 import ContactInfo from '@/components/sections/ContactInfo'
 import Newsletter from '@/components/sections/Newsletter'
@@ -16,7 +16,7 @@ export default function Home() {
       <Relatability />
       <EntryPoints />
       <Products />
-      <Services />
+      {/* <Services /> */}
       <OngoingPractices />
       <About />
       <ContactInfo />

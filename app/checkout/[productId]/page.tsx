@@ -36,10 +36,10 @@ export default async function CheckoutPage({
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-brand-dark mb-4">
+          <h1 className="text-3xl font-bold text-brand-text mb-4">
             Sản phẩm không tìm thấy
           </h1>
-          <a href="/" className="text-brand-gold hover:underline">
+          <a href="/" className="text-brand-primary hover:underline">
             Quay lại trang chủ
           </a>
         </div>
@@ -48,33 +48,33 @@ export default async function CheckoutPage({
   }
 
   return (
-    <div className="min-h-screen bg-brand-cream py-12 px-4">
+    <div className="min-h-screen bg-brand-light py-12 px-4">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <a href="/" className="text-brand-gold hover:underline mb-8 inline-block">
+          <a href="/" className="text-brand-primary hover:underline mb-8 inline-block">
             ← Quay lại
           </a>
-          <h1 className="text-4xl font-serif text-brand-dark mb-2">
+          <h1 className="text-4xl font-serif text-brand-text mb-2">
             {product.title}
           </h1>
-          <p className="text-gray-600">{product.description}</p>
+          <p className="text-brand-text/70">{product.description}</p>
         </div>
 
         {/* Product Info */}
-        <div className="bg-white rounded-lg p-6 mb-8 border-l-4 border-brand-gold">
+        <div className="bg-white rounded-lg p-6 mb-8 border-l-4 border-brand-primary">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
               <span className="text-3xl">🕐</span>
               <div>
-                <div className="text-2xl font-bold text-brand-dark">
+                <div className="text-2xl font-bold text-brand-text">
                   {product.duration}
                 </div>
-                <div className="text-gray-600">{product.period}</div>
+                <div className="text-brand-text/60">{product.period}</div>
               </div>
             </div>
             <div className="text-right">
-              <div className="text-3xl font-bold text-brand-gold">
+              <div className="text-3xl font-bold text-brand-primary">
                 {product.price.toLocaleString('vi-VN')}đ
               </div>
             </div>
