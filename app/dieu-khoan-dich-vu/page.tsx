@@ -50,7 +50,7 @@ export default function TermsOfService() {
             <ul className="list-disc list-inside space-y-2 ml-4">
               <li>Liên kết Zoom sẽ được gửi qua email 1 ngày trước</li>
               <li>Chuẩn bị một không gian yên tĩnh và thảm yoga</li>
-              <li><strong>Workshop không có ghi hình</strong> — trải nghiệm chỉ xảy ra khi bạn có mặt</li>
+              <li><strong>Workshop không có ghi hình</strong>: trải nghiệm chỉ xảy ra khi bạn có mặt</li>
             </ul>
           </section>
 

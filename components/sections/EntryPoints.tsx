@@ -1,63 +1,124 @@
+const products = [
+  // Nhom 1: San pham so
+  {
+    number: '01',
+    tag: 'Audio & Breathing',
+    title: 'SOS Sleep Kit',
+    description:
+      'Một bộ công cụ cho những đêm đầu óc không chịu tắt. Gồm audio, các bài thở và thực hành ngắn giúp khẩn cấp điều hòa hệ thần kinh, đưa cơ thể rời khỏi trạng thái cảnh giác để vào giấc khi bạn tỉnh giữa đêm.',
+    cta: 'Tìm hiểu thêm',
+    link: 'https://sos-sleep-kit.vercel.app/',
+  },
+  {
+    number: '02',
+    tag: 'Paid Newsletter',
+    title: 'Điểm Nghỉ · The Rest Stop',
+    description:
+      'Bản tin chuyên sâu có phí dành cho những người đã quen sống trong trạng thái căng. Mỗi 7 ngày, bạn nhận recovery letters, audio và kiến thức phục hồi để cơ thể không chỉ chịu đựng, mà dần học lại cách nghỉ.',
+    cta: 'Tìm hiểu thêm',
+    link: 'https://thereststop.vercel.app/',
+  },
+  {
+    number: '03',
+    tag: 'Online Workshop',
+    title: 'Workshop Tắt Nút Chiến Đấu',
+    description:
+      'Buổi chia sẻ online giúp bạn hiểu vì sao người làm việc cường độ cao thường khó nghỉ ngơi, chuyện gì xảy ra khi stress kéo dài, và cách chủ động nhìn rõ vòng lặp phía sau sự kiệt sức.',
+    cta: 'Tìm hiểu thêm',
+    link: 'https://workshop-nervous-system-reset.vercel.app/',
+  },
+
+  // Nhom 2: Khoa hoc & Chuong trinh dong hanh
+  {
+    number: '04',
+    tag: 'Weekly Yoga Practice',
+    title: 'Recovery Rhythm · Nhịp Phục Hồi',
+    description:
+      'Không gian thực hành giúp hệ thần kinh quay lại nhịp độ tự nhiên qua các buổi Yoga phục hồi 3 buổi/tuần (không tư thế khó, không hiệu suất) và các bài dẫn đưa cơ thể ra khỏi trạng thái căng giác kéo dài.',
+    cta: 'Tìm hiểu thêm',
+    link: 'https://lop-group.vercel.app/yoga-class.html',
+  },
+  {
+    number: '05',
+    tag: '90-Day Mentorship',
+    title: 'The Reclaim Protocol',
+    description:
+      'Lộ trình chuyên sâu giúp tái cấu trúc cách bạn phản ứng với áp lực và thay đổi mối quan hệ giữa cơ thể và công việc. Chúng mình đi sâu vào nervous system patterns để tìm lại sự chuyển dịch bền vững từ gốc.',
+    cta: 'Khám phá lộ trình',
+    link: 'https://the-reclaim-program.vercel.app/',
+  },
+  {
+    number: '06',
+    tag: 'Premium 1:1 Support',
+    title: '1:1 Premium Support',
+    description:
+      'Giải pháp được thiết kế riêng biệt dựa trên thể trạng, nhịp sống và mức độ quá tải thực tế của từng người để mang lại sự phục hồi tối ưu nhất.',
+    cta: 'Đăng ký tư vấn',
+    link: 'https://forms.gle/zhQWGEZcoaVKzQWX6',
+  },
+]
+
 export default function EntryPoints() {
-  const entryPoints = [
-    {
-      number: '01',
-      title: 'Quá tải ngay lúc này?',
-      product: 'SOS Sleep Kit',
-      description: 'Audio, breathing sequences và thực hành ngắn giúp cơ thể rời khỏi trạng thái cảnh giác.',
-      link: 'https://sos-sleep-kit.vercel.app/',
-    },
-    {
-      number: '02',
-      title: 'Muốn hiểu chuyện gì đang xảy ra?',
-      product: 'Workshop Tắt Nút Chiến Đấu',
-      description: 'Chia sẻ online để hiểu vì sao khó nghỉ và cách phá vòng lặp kiệt sức.',
-      link: 'https://workshop-nervous-system-reset.vercel.app/',
-    },
-    {
-      number: '03',
-      title: 'Muốn cách phục hồi lâu dài?',
-      product: 'The Reclaim Protocol',
-      description: 'Lộ trình chuyên sâu để thay đổi mối quan hệ giữa cơ thể và công việc từ gốc.',
-      link: 'https://the-reclaim-program.vercel.app/',
-    },
-    {
-      number: '04',
-      title: 'Cần hỗ trợ cá nhân hóa?',
-      product: '1:1 Support',
-      description: 'Thiết kế riêng theo thể trạng, nhịp sống và mức độ quá tải của bạn.',
-      link: 'https://forms.gle/zhQWGEZcoaVKzQWX6',
-    },
-  ]
-
   return (
-    <section id="entry-points" className="py-20 md:py-32 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-serif text-brand-text mb-6 text-center">
-          Bắt đầu từ đâu?
-        </h2>
-        <p className="text-center text-brand-text/70 mb-16 max-w-2xl mx-auto">
-          Chọn điểm khởi đầu phù hợp với tình trạng và nhu cầu của bạn
-        </p>
+    <section id="entry-points" className="py-24 md:py-32 px-4 bg-cream">
+      <div className="container-wide">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {entryPoints.map((point, idx) => (
-            <div key={idx} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-8 border-l-4 border-brand-overlay">
-              <div className="text-5xl font-serif font-bold text-brand-highlight/30 mb-4">{point.number}</div>
-              <h3 className="text-lg font-semibold text-brand-text/70 mb-2">{point.title}</h3>
-              <h4 className="text-2xl font-serif text-brand-text mb-4">{point.product}</h4>
-              <p className="text-brand-text/60 mb-6">{point.description}</p>
-              <a
-                href={point.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-gold inline-block"
+        {/* Header */}
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <span className="eyebrow mb-4 block">Sản phẩm & Chương trình</span>
+          <h2 className="text-ink mb-4">Bạn đang ở đâu trong hành trình này?</h2>
+          <p className="text-ink-soft text-lg">
+            Chọn điểm khởi đầu phù hợp nhất với trạng thái hiện tại của bạn để gặp lại cơ thể mình một lần nữa.
+          </p>
+        </div>
+
+        {/* 3 × 2 grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {products.map((p) => (
+            <a
+              key={p.number}
+              href={p.link}
+              target={p.link.startsWith('http') ? '_blank' : undefined}
+              rel={p.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+              className="group flex flex-col bg-paper border border-ink/10 rounded-2xl p-7 transition-all duration-200 hover:border-sage/40 hover:shadow-[0_12px_40px_-20px_rgba(34,101,74,0.25)]"
+            >
+              {/* Top row: number + tag */}
+              <div className="flex items-center gap-3 mb-5">
+                <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-sage text-paper text-xs font-semibold shrink-0">
+                  {p.number}
+                </span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-ink-mute">
+                  {p.tag}
+                </span>
+              </div>
+
+              {/* Product name */}
+              <h3
+                className="text-ink mb-3 group-hover:text-sage transition-colors"
+                style={{ fontSize: '1.25rem', lineHeight: 1.3 }}
               >
-                Tìm hiểu thêm
-              </a>
-            </div>
+                {p.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-ink-soft text-sm leading-relaxed mb-6 flex-1">
+                {p.description}
+              </p>
+
+              {/* CTA */}
+              <span className="inline-flex items-center gap-2 text-sage font-semibold text-sm mt-auto">
+                {p.cta}
+                <span
+                  className="transition-transform duration-200 group-hover:translate-x-1"
+                  aria-hidden="true"
+                >
+                  →
+                </span>
+              </span>
+            </a>
           ))}
         </div>
+
       </div>
     </section>
   )

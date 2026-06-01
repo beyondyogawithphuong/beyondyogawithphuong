@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="vi" className={`${lora.variable} ${montserrat.variable}`}>
       <body className="bg-white font-body">
         <Navigation />
-        <div className="pt-24">
+        <div className="pt-16 md:pt-20">
           {children}
         </div>
       </body>

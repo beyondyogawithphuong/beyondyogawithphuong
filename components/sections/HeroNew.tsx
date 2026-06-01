@@ -1,56 +1,48 @@
 export default function HeroNew() {
   return (
-    <section className="w-full bg-white py-24 px-4 md:py-32">
-      <div className="w-full max-w-4xl mx-auto">
-        {/* CTA Button */}
-        <div className="text-center mb-12">
-          <a href="#entry-points" className="inline-block px-6 py-2 bg-brand-overlay text-white font-semibold rounded-full text-sm">
-            Bắt đầu từ đâu?
-          </a>
-        </div>
+    <section className="bg-paper py-16 md:py-24 px-4">
+      <div className="container-wide">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 
-        {/* Main Headline */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-serif mb-4" style={{color: '#1a1a1a'}}>
-            Có những ngày, cơ thể chỉ muốn
-          </h1>
-          <h1 className="text-5xl md:text-6xl font-serif" style={{color: '#22654a'}}>
-            đình công
-          </h1>
-        </div>
+          {/* Portrait: left on desktop, below on mobile */}
+          <div className="order-2 md:order-1">
+            <div className="rounded-2xl overflow-hidden aspect-[4/5] shadow-[0_40px_80px_-30px_rgba(34,101,74,0.3)] max-w-sm mx-auto md:max-w-none">
+              <img
+                src="/phuong.png"
+                alt="Phuong, Beyond Yoga"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
 
-        {/* Subheading */}
-        <p className="text-center text-lg mb-12 max-w-2xl mx-auto" style={{color: '#1a1a1a'}}>
-          Sáng thức dậy, thứ đầu tiên bạn cảm nhận không phải là sự tỉnh táo. Mà là cái cổ cứng đờ, hàm siết chặt.
-        </p>
+          {/* Text: right on desktop, above on mobile */}
+          <div className="order-1 md:order-2">
+            <span className="eyebrow mb-6 block">Beyond Yoga with Phương</span>
 
-        {/* Divider */}
-        <div className="flex justify-center items-center gap-4 mb-12">
-          <div className="w-12 h-px" style={{backgroundColor: '#00E5FF'}}></div>
-          <p className="text-sm font-semibold" style={{color: '#22654a'}}>
-            HIỂU RÕ HỆ THẦN KINH
-          </p>
-          <div className="w-12 h-px" style={{backgroundColor: '#00E5FF'}}></div>
-        </div>
+            <h1 className="text-ink mb-6" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', lineHeight: 1.3 }}>
+              Hệ thần kinh kiệt sức không tự hồi phục chỉ bằng việc nằm nghỉ.
+            </h1>
 
-        {/* Key Message */}
-        <p className="text-center text-lg mb-12 max-w-3xl mx-auto italic" style={{color: '#1a1a1a'}}>
-          Bạn không thiếu <strong>kỷ luật</strong> hay <strong>ý chí</strong>.
-          Chỉ là hệ thần kinh của bạn đã quá tải quá lâu để tự chuyển về trạng thái <span style={{color: '#22654a', fontWeight: 'bold'}}>an toàn</span>.
-        </p>
+            <p className="text-lg text-ink-soft mb-10 leading-relaxed max-w-lg">
+              Giải pháp điều hòa hệ thần kinh, tái tạo năng lượng gốc và phục hồi giấc ngủ sâu dành cho những người làm việc trí óc cường độ cao.
+            </p>
 
-        {/* CTA Button */}
-        <div className="text-center">
-          <a href="#story" className="inline-block px-8 py-3 font-semibold rounded-full text-lg" style={{backgroundColor: '#22654a', color: '#FFFFFF'}}>
-            Tìm hiểu thêm
-          </a>
-        </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://sos-sleep-kit.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-center"
+              >
+                Xử lý quá tải ngay (SOS Sleep Kit)
+              </a>
+              {/* TODO: bỏ opacity-40 pointer-events-none khi hoàn thiện trang /shop */}
+              <a href="/shop" className="btn-ghost text-center opacity-40 pointer-events-none">
+                Khám phá Kho Audio Phục Hồi
+              </a>
+            </div>
+          </div>
 
-        {/* Footer text */}
-        <div className="text-center mt-16 pt-8" style={{borderTop: '1px solid rgba(34, 101, 74, 0.2)'}}>
-          <p className="text-sm" style={{color: '#1a1a1a', opacity: 0.5}}>
-            Phương — Tái tạo năng lượng từ gốc
-          </p>
         </div>
       </div>
     </section>

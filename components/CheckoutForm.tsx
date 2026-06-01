@@ -96,7 +96,7 @@ export default function CheckoutForm({ product, productId }: CheckoutFormProps) 
         <p className="text-sm text-red-600 mt-3 flex gap-2">
           <span>⚠️</span>
           <span>
-            Kiểm tra kỹ email trước khi tiếp tục — link tải sản phẩm sẽ gửi tới đây và <strong>không thể thay đổi sau khi thanh toán</strong>.
+            Kiểm tra kỹ email trước khi tiếp tục. Link tải sản phẩm sẽ gửi tới đây và <strong>không thể thay đổi sau khi thanh toán</strong>.
           </span>
         </p>
       </div>

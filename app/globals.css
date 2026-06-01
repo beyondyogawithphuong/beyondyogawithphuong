@@ -16,73 +16,148 @@ body {
   background: #ffffff;
   color: #1a1a1a;
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
+/* ===== Typography ===== */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lora', serif;
   font-weight: 600;
-  line-height: 1.3;
   color: #1a1a1a;
+  letter-spacing: -0.01em;
 }
 
-h1 { font-size: 3.5rem; }
-h2 { font-size: 2.5rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.15;
+}
+h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.2;
+}
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
 
-/* Buttons */
+p {
+  color: #4a4a4a;
+  line-height: 1.75;
+}
+
+/* ===== Eyebrow label ===== */
+.eyebrow {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #22654a;
+}
+
+/* ===== Buttons ===== */
 .btn-primary {
-  @apply inline-block px-8 py-3 bg-brand-overlay text-brand-text font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] active:translate-y-0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  background: #22654a;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  border-radius: 9999px;
+  border: 1.5px solid #22654a;
+  transition: background-color 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+.btn-primary:hover {
+  background: #1a5239;
+  border-color: #1a5239;
+  box-shadow: 0 10px 24px -12px rgba(34, 101, 74, 0.5);
 }
 
-.btn-highlight {
-  @apply inline-block px-8 py-3 bg-brand-overlay text-brand-text font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] active:translate-y-0;
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  background: transparent;
+  color: #22654a;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  border-radius: 9999px;
+  border: 1.5px solid #22654a;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.btn-ghost:hover {
+  background: #22654a;
+  color: #ffffff;
 }
 
-.btn-warning {
-  @apply inline-block px-8 py-3 bg-brand-warning text-brand-text font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] active:translate-y-0;
+/* ===== Editorial pullquote ===== */
+.pullquote {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.45;
+  color: #1a1a1a;
+  border-left: 2px solid #22654a;
+  padding-left: 1.5rem;
+  margin: 2.5rem 0;
+}
+@media (min-width: 768px) {
+  .pullquote {
+    font-size: 1.875rem;
+    padding-left: 2rem;
+  }
 }
 
-.btn-gold {
-  @apply inline-block px-6 py-3 bg-brand-overlay text-brand-text font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] active:translate-y-0;
-}
-
-/* Overlay sections */
-.overlay-section {
-  @apply bg-brand-overlay bg-opacity-55 text-brand-text;
-}
-
-/* Highlight text */
+/* ===== Highlight ===== */
 .highlight {
-  @apply text-brand-highlight font-semibold;
+  color: #22654a;
+  font-style: italic;
+  font-weight: 600;
 }
 
-/* Warning accent */
-.warning-accent {
-  @apply text-brand-warning;
-}
-
-/* Cards */
-.card {
-  @apply bg-white border border-gray-200 p-8 transition-all hover:shadow-lg;
-}
-
-/* Spacing */
+/* ===== Spacing ===== */
 .section-padding {
-  @apply py-24 md:py-32 px-4;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-
-.section-padding-sm {
-  @apply py-16 md:py-20 px-4;
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
 }
 
 .container-tight {
-  @apply max-w-2xl mx-auto;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-reading {
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container-wide {
-  @apply max-w-6xl mx-auto;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
 }

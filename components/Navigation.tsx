@@ -1,72 +1,81 @@
 'use client'
 
-import Link from 'next/link'
 import { useState, useEffect } from 'react'
+
+type NavItem = { label: string; href: string; external?: boolean }
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0)
-    }
+    const handleScroll = () => setIsScrolled(window.scrollY > 8)
+    handleScroll()
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navItems = [
-    { label: 'MAIN PAGE', href: '/' },
-    { label: 'BẢN TIN', href: 'https://beyondyogawithphuong.substack.com/', external: true },
-    { label: 'DỊCH VỤ', href: '#services' },
-    { label: 'CONTACT INFO', href: '#contact' },
-    { label: 'VỀ PHƯƠNG', href: '#about' },
+  const leftItems: NavItem[] = [
+    { label: 'BẮT ĐẦU', href: '#entry-points' },
+    { label: 'SẢN PHẨM', href: '#entry-points' },
   ]
 
+  const rightItems: NavItem[] = [
+    { label: 'VỀ PHƯƠNG', href: '#about' },
+    { label: 'THƯ VIỆN', href: '#free-resources' },
+    { label: 'BẢN TIN ↗', href: 'https://beyondyogawithphuong.substack.com/', external: true },
+  ]
+
+  const linkClass =
+    'text-xs md:text-sm font-body font-semibold tracking-wider text-ink hover:text-sage transition-colors'
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-white'
-    }`}>
-      <div className="container-wide mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          {/* Left Nav Items */}
-          <div className="flex items-center gap-8">
-            {navItems.slice(0, 2).map((item: any) => (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-paper ${
+        isScrolled
+          ? 'border-b border-ink/10 shadow-[0_4px_20px_-12px_rgba(0,0,0,0.12)]'
+          : 'border-b border-transparent'
+      }`}
+    >
+      <div className="container-wide px-4 md:px-6 py-3 md:py-4">
+        <div className="flex items-center justify-between gap-4">
+
+          {/* Left */}
+          <div className="flex items-center gap-6 md:gap-8 flex-1">
+            {leftItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className={`hidden sm:inline-block ${linkClass}`}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Logo */}
+          <a href="/" className="flex justify-center shrink-0" aria-label="Beyond Yoga with Phuong, Trang chu">
+            <div className="h-10 w-10 md:h-12 md:w-12 rounded-full overflow-hidden bg-sage-soft">
+              <img src="/logo.png" alt="Beyond Yoga" className="h-full w-full object-cover" />
+            </div>
+          </a>
+
+          {/* Right */}
+          <div className="flex items-center justify-end gap-6 md:gap-8 flex-1">
+            {rightItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 target={item.external ? '_blank' : undefined}
                 rel={item.external ? 'noopener noreferrer' : undefined}
-                className="text-sm font-body font-semibold text-brand-text hover:text-brand-highlight transition-colors"
+                className={`hidden sm:inline-block ${linkClass}`}
               >
                 {item.label}
               </a>
             ))}
           </div>
 
-          {/* Logo Center */}
-          <div className="flex-1 flex justify-center">
-            <div className="h-12 w-12 rounded-full overflow-hidden flex items-center justify-center bg-brand-overlay/10">
-              <img src="/logo.png" alt="Beyond Yoga" className="h-full w-full object-cover" />
-            </div>
-          </div>
-
-          {/* Right Nav Items */}
-          <div className="flex items-center gap-8">
-            {navItems.slice(2).map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-sm font-body font-semibold text-brand-text hover:text-brand-highlight transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
-
-      {/* Divider */}
-      <div className="h-px bg-brand-overlay/20"></div>
     </nav>
   )
 }
