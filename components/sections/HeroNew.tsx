@@ -28,17 +28,16 @@ export default function HeroNew() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
+              <a href="#entry-points" className="btn-primary text-center">
+                Chọn lối vào của bạn
+              </a>
               <a
-                href="https://sos-sleep-kit.vercel.app/"
+                href="https://www.youtube.com/@phuong.wellbeingstrategist/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary text-center"
+                className="btn-ghost text-center"
               >
-                Xử lý quá tải ngay (SOS Sleep Kit)
-              </a>
-              {/* TODO: bỏ opacity-40 pointer-events-none khi hoàn thiện trang /shop */}
-              <a href="/shop" className="btn-ghost text-center opacity-40 pointer-events-none">
-                Khám phá Kho Audio Phục Hồi
+                Ghé thăm kênh YouTube
               </a>
             </div>
           </div>

@@ -1,4 +1,16 @@
-const products = [
+type Product = {
+  number: string
+  tag: string
+  title: string
+  description: string
+  cta: string
+  link: string
+  secondCta?: string
+  secondLink?: string
+  secondDisabled?: boolean
+}
+
+const products: Product[] = [
   // Nhom 1: San pham so
   {
     number: '01',
@@ -6,8 +18,11 @@ const products = [
     title: 'SOS Sleep Kit',
     description:
       'Một bộ công cụ cho những đêm đầu óc không chịu tắt. Gồm audio, các bài thở và thực hành ngắn giúp khẩn cấp điều hòa hệ thần kinh, đưa cơ thể rời khỏi trạng thái cảnh giác để vào giấc khi bạn tỉnh giữa đêm.',
-    cta: 'Tìm hiểu thêm',
+    cta: 'Xử lý quá tải ngay',
     link: 'https://sos-sleep-kit.vercel.app/',
+    secondCta: 'Khám phá Kho Audio Phục Hồi',
+    secondLink: '/shop',
+    secondDisabled: true, // bỏ dòng này khi /shop hoàn thiện
   },
   {
     number: '02',
@@ -72,51 +87,95 @@ export default function EntryPoints() {
           </p>
         </div>
 
-        {/* 3 × 2 grid */}
+        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {products.map((p) => (
-            <a
-              key={p.number}
-              href={p.link}
-              target={p.link.startsWith('http') ? '_blank' : undefined}
-              rel={p.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="group flex flex-col bg-paper border border-ink/10 rounded-2xl p-7 transition-all duration-200 hover:border-sage/40 hover:shadow-[0_12px_40px_-20px_rgba(34,101,74,0.25)]"
-            >
-              {/* Top row: number + tag */}
-              <div className="flex items-center gap-3 mb-5">
-                <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-sage text-paper text-xs font-semibold shrink-0">
-                  {p.number}
-                </span>
-                <span className="text-xs font-semibold uppercase tracking-wider text-ink-mute">
-                  {p.tag}
-                </span>
-              </div>
+          {products.map((p) => {
+            const hasTwoButtons = !!p.secondLink
 
-              {/* Product name */}
-              <h3
-                className="text-ink mb-3 group-hover:text-sage transition-colors"
-                style={{ fontSize: '1.25rem', lineHeight: 1.3 }}
-              >
-                {p.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-ink-soft text-sm leading-relaxed mb-6 flex-1">
-                {p.description}
-              </p>
-
-              {/* CTA */}
-              <span className="inline-flex items-center gap-2 text-sage font-semibold text-sm mt-auto">
-                {p.cta}
-                <span
-                  className="transition-transform duration-200 group-hover:translate-x-1"
-                  aria-hidden="true"
+            // Card with 2 buttons: div wrapper (not full-link)
+            if (hasTwoButtons) {
+              return (
+                <div
+                  key={p.number}
+                  className="flex flex-col bg-paper border border-ink/10 rounded-2xl p-7 transition-all duration-200 hover:border-sage/40 hover:shadow-[0_12px_40px_-20px_rgba(34,101,74,0.25)]"
                 >
-                  →
+                  <div className="flex items-center gap-3 mb-5">
+                    <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-sage text-paper text-xs font-semibold shrink-0">
+                      {p.number}
+                    </span>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-ink-mute">
+                      {p.tag}
+                    </span>
+                  </div>
+
+                  <h3 className="text-ink mb-3" style={{ fontSize: '1.25rem', lineHeight: 1.3 }}>
+                    {p.title}
+                  </h3>
+
+                  <p className="text-ink-soft text-sm leading-relaxed mb-6 flex-1">
+                    {p.description}
+                  </p>
+
+                  {/* Two buttons side by side */}
+                  <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary text-center text-sm"
+                      style={{ padding: '0.65rem 1.25rem' }}
+                    >
+                      {p.cta}
+                    </a>
+                    {/* TODO: bỏ opacity-40 pointer-events-none khi /shop hoàn thiện */}
+                    <a
+                      href={p.secondLink}
+                      className={`btn-ghost text-center text-sm ${p.secondDisabled ? 'opacity-40 pointer-events-none' : ''}`}
+                      style={{ padding: '0.65rem 1.25rem' }}
+                    >
+                      {p.secondCta}
+                    </a>
+                  </div>
+                </div>
+              )
+            }
+
+            // Regular card: full-link wrapper
+            return (
+              <a
+                key={p.number}
+                href={p.link}
+                target={p.link.startsWith('http') ? '_blank' : undefined}
+                rel={p.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className="group flex flex-col bg-paper border border-ink/10 rounded-2xl p-7 transition-all duration-200 hover:border-sage/40 hover:shadow-[0_12px_40px_-20px_rgba(34,101,74,0.25)]"
+              >
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-sage text-paper text-xs font-semibold shrink-0">
+                    {p.number}
+                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-ink-mute">
+                    {p.tag}
+                  </span>
+                </div>
+
+                <h3
+                  className="text-ink mb-3 group-hover:text-sage transition-colors"
+                  style={{ fontSize: '1.25rem', lineHeight: 1.3 }}
+                >
+                  {p.title}
+                </h3>
+
+                <p className="text-ink-soft text-sm leading-relaxed mb-6 flex-1">
+                  {p.description}
+                </p>
+
+                <span className="inline-flex items-center gap-2 text-sage font-semibold text-sm mt-auto">
+                  {p.cta}
+                  <span className="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
                 </span>
-              </span>
-            </a>
-          ))}
+              </a>
+            )
+          })}
         </div>
 
       </div>
