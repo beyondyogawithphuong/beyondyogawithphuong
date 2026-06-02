@@ -84,7 +84,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <PhoneIcon className="text-cyan shrink-0" />
-                <a href="tel:0772488828" className="hover:text-cyan transition-colors">0772 488 828</a>
+                <span>0772 488 828 <span className="text-paper/50">(chỉ nhắn tin Zalo)</span></span>
               </li>
               <li className="flex items-center gap-3">
                 <MailIcon className="text-cyan shrink-0" />
