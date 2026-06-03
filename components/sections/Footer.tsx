@@ -28,6 +28,13 @@ const YouTubeIcon = ({ className = '' }: IconProps) => (
     <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
   </svg>
 )
+const InstagramIcon = ({ className = '' }: IconProps) => (
+  <svg className={className} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <circle cx="12" cy="12" r="4"/>
+    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+  </svg>
+)
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -92,7 +99,7 @@ export default function Footer() {
                   beyondyogawithphuong@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-5 pt-3">
+              <li className="flex items-center gap-5 pt-3 flex-wrap">
                 <a href="https://www.facebook.com/phuong.wellbeing" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 hover:text-cyan transition-colors" aria-label="Facebook">
                   <FacebookIcon /><span>Facebook</span>
@@ -100,6 +107,10 @@ export default function Footer() {
                 <a href="https://www.youtube.com/@phuong.wellbeingstrategist/" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 hover:text-cyan transition-colors" aria-label="YouTube">
                   <YouTubeIcon /><span>YouTube</span>
+                </a>
+                <a href="https://www.instagram.com/phuong.wellbeingstrategist/" target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-cyan transition-colors" aria-label="Instagram">
+                  <InstagramIcon /><span>Instagram</span>
                 </a>
               </li>
             </ul>
