@@ -6,7 +6,7 @@ export default function HeroNew() {
 
           {/* Portrait: left on desktop, below on mobile */}
           <div className="order-2 md:order-1">
-            <div className="rounded-2xl overflow-hidden aspect-[4/5] shadow-[0_40px_80px_-30px_rgba(34,101,74,0.3)] max-w-sm mx-auto md:max-w-none">
+            <div className="rounded-2xl overflow-hidden aspect-[4/5] shadow-[0_40px_80px_-30px_rgba(34,101,74,0.3)] max-w-[180px] mx-auto md:max-w-[260px]">
               <img
                 src="/phuong.png"
                 alt="Phuong, Beyond Yoga"
