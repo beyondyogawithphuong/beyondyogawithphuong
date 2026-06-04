@@ -39,8 +39,13 @@ export default function HeroNew() {
               >
                 Xử lý quá tải ngay (SOS Sleep Kit)
               </a>
-              <a href="/shop" className="btn-ghost text-center">
-                Khám phá Kho Audio Phục Hồi
+              <a
+                href="https://workshop-nervous-system-reset.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost text-center"
+              >
+                Workshop Tắt Nút Chiến Đấu
               </a>
             </div>
           </div>
