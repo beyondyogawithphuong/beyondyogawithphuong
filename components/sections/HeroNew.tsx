@@ -27,7 +27,7 @@ export default function HeroNew() {
             </h1>
 
             <p className="text-lg text-ink-soft mb-10 leading-relaxed">
-              Giải pháp điều hòa hệ thần kinh, tái tạo năng lượng gốc và phục hồi giấc ngủ sâu dành cho những người làm việc trí óc cường độ cao.
+              Dành cho những người đã thử đủ cách nhưng vẫn thức dậy trong trạng thái chưa được nghỉ ngơi.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
