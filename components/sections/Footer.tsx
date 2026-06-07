@@ -98,7 +98,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-2 hover:text-cyan transition-colors" aria-label="YouTube">
                   <YouTubeIcon /><span>YouTube</span>
                 </a>
-                <a href="https://www.instagram.com/phuong.wellbeingstrategist/" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.instagram.com/beyondyogawithphuong/" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 hover:text-cyan transition-colors" aria-label="Instagram">
                   <InstagramIcon /><span>Instagram</span>
                 </a>
